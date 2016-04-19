@@ -1,0 +1,56 @@
+html, body, .wrapper { height: 100%; }
+body .wrapper { 
+	height: auto; 
+	min-height: 100%;
+	padding-bottom: 6em;
+}
+
+.footer {
+	clear: both;
+	position: relative;
+	z-index: 10;
+	height: 3em;
+	margin-top: -6em;
+}
+
+.draggable-image {
+	width: auto;
+	height: 80px;
+	max-width: 150px;
+}
+
+.image-placeholder {
+	padding: 5px;
+	margin: 5px;
+}
+
+.tools {
+	padding: 20px 15px;
+	border: 1px solid  #d9d9d9;
+	border-top: none;
+}
+
+.img-loader-container {
+	display: block;
+}
+
+.other-tools {
+	margin: 20px 0;
+}
+
+#canvas-drop-area {
+	margin-top: 12px;
+
+}
+
+.nav-tabs li {
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.filters > label {
+	display: block;
+}

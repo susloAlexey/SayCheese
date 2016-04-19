@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>SayCheese</title>
+    
+    <!-- styles -->
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">      
+
+</head>
+<body>
+
+<div class="wrapper">
+
+<header class="header">
+    <div class="container">
+        <h1>Fancy Image Editor</h1><hr>
+    </div>
+</header>
+
+<section class="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+
+                <p class="lead">Select background image from your computer</p>        
+                <input type="file" id="bg-loader" accept="image/*">
+
+                <!-- Canvas placeholder -->
+                <div id="canvas-drop-area" style="display: none">
+                    <canvas id="canvas"></canvas>
+                </div>
+
+            </div>
+            <div class="col-md-5">
+                <div class="tools-container" style="display: none">
+
+                    <div class="tools-menu">
+                        <ul class="nav nav-tabs">
+                            <li class="active" id="images"><a>Images</a></li>
+                            <li id="filters"><a>Filters</a></li>
+                        </ul>
+                    </div>                    
+                    
+                    <div class="tools images-container">
+                        <p>You can drag and drop images</p><hr>
+
+                        <div class="images">
+                            <div class="image-placeholder img-thumbnail"><img src="img/1.png" class="draggable-image"></img></div>
+                            <div class="image-placeholder img-thumbnail"><img src="img/2.png" class="draggable-image"></img></div>
+                            <div class="image-placeholder img-thumbnail"><img src="img/3.png" class="draggable-image"></img></div>
+                            <div class="image-placeholder img-thumbnail"><img src="img/4.png" class="draggable-image"></img></div>
+                            <div class="image-placeholder img-thumbnail"><img src="img/5.png" class="draggable-image"></img></div>
+                            <div class="image-placeholder img-thumbnail"><img src="img/6.png" class="draggable-image"></img></div>
+                            <div class="image-placeholder img-thumbnail"><img src="img/7.png" class="draggable-image"></img></div>
+                            <div class="image-placeholder img-thumbnail"><img src="img/8.png" class="draggable-image"></img></div>
+                            <div class="image-placeholder img-thumbnail"><img src="img/9.png" class="draggable-image"></img></div>
+                            <div class="image-placeholder img-thumbnail"><img src="img/10.png" class="draggable-image"></img></div>
+                            <div class="image-placeholder img-thumbnail"><img src="img/11.png" class="draggable-image"></img></div>
+                        </div><hr>
+
+                        <div class="img-loader-container">
+                            <p>Or load image from your computer</p>
+                            <input type="file" id="img-loader" accept="image/*">
+                        </div>
+                    </div> 
+
+                    <div class="tools filters-container" style="display: none">
+                        <p>You can use filters</p><hr>
+                        <div class="filters">
+
+                            <label><input type="checkbox" id="grayscale"> Grayscale</label>                 
+                            <label><input type="checkbox" id="invert"> Invert</label>                        
+                            <label><input type="checkbox" id="sepia"> Sepia</label>                          
+                            <label><input type="checkbox" id="sepia2"> Sepia2</label>
+                            <label><input type="checkbox" id="blur"> Blur</label>
+                            <label><input type="checkbox" id="sharpen"> Sharpen</label>
+                            <label><input type="checkbox" id="emboss"> Emboss</label><hr>
+
+                            <label><input type="checkbox" id="remove-white"> Remove white</label>
+                            <label>Threshold: <input type="range" id="remove-white-threshold" value="60" min="0" max="255"></label>
+                            <label>Distance: <input type="range" id="remove-white-distance" value="10" min="0" max="255"></label><hr>
+
+                            <label><input type="checkbox" id="brightness"> Brightness</label>
+                            <label>Value: <input type="range" id="brightness-value" value="100" min="0" max="255"></label><hr>
+
+                            <label><input type="checkbox" id="noise"> Noise</label>
+                            <label>Value: <input type="range" id="noise-value" value="100" min="0" max="1000"></label><hr>
+
+                            <label><input type="checkbox" id="gradient-transparency"> GradientTransparency</label>
+                            <label>Value: <input type="range" id="gradient-transparency-value" value="100" min="0" max="255"></label><hr>
+
+                            <label><input type="checkbox" id="pixelate"> Pixelate</label>
+                            <label>Value: <input type="range" id="pixelate-value" value="4" min="2" max="20"></label><hr>
+
+                            <label><input type="checkbox" id="tint"> Tint</label>
+                            <label>Color: <input type="color" id="tint-color" value=""></label>
+                            <label>Opacity: <input type="range" id="tint-opacity" min="0" max="1" value="0.5" step="0.1"></label><hr>
+
+                        </div>                        
+                        <button id="remove-filters" class="btn btn-default">Remove filters</button>
+                    </div>                   
+
+                    <div class="other-tools">                        
+                        <button id="delete" class="btn btn-default">Delete items</button>   
+                        <button id="deselect" class="btn btn-default">Deselect items</button> 
+                        <button id="flip-vertical" class="btn btn-default">Flip vertical</button>                                  
+                    </div>  
+
+                    <div class="download">
+                        <a id="save" class="btn btn-primary" download="Your image.png">Download as image</a>
+                    </div>             
+
+                </div>
+            </div>            
+        </div>      
+    </div>
+</section>
+
+</div>
+
+<footer class="footer">
+    <div class="container"><hr>
+        <p>SayCheese 2016</p>
+    </div>
+</footer>
+
+<!-- libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
+<script src="js/lib/jquery-ui.min.js"></script>  
+<script src="js/lib/fabric.min.js"></script>
+<!-- app -->
+<script src="js/main.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/options.js"></script>
+<script src="js/filters.js"></script>    
+
+</body>
+</html>
