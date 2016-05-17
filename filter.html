@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+    <meta name="author" content="">
+    <title>Say Cheese</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/styles-filter.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<!-- fonts-->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  </head>
+   <body>
+   	<div class="wrapper">
+    <header class="top-header">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">					
+					<nav class="navbar navbar-default">
+						<div class="container-fluid nav-bar">
+						    <div class="navbar-header">
+						      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+						        <span class="sr-only">Toggle navigation</span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						      </button>
+						      <a href="index.html"><img src="img/logo.png" alt="Say Cheese" class="img-responsive logo"></a>
+						    </div>
+						    <div class="collapse navbar-collapse" id="myNavbar">
+						      <ul class="nav navbar-nav navbar-right">
+						      	<li><a href="index.html">ГЛАВНАЯ</a></li>
+						      	<li><a href="#">РЕДАКТОР</a></li>
+						        <li><a href="contacts.html">КОНТАКТЫ</a></li>						       
+						        <li><a href="about.html">О НАС</a></li>
+							  </ul>
+						    </div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>	
+	<!-- <section id="filter">
+	    <div class="container">
+		    <div class="row">
+			    <div class="col-md-6">
+					<button type="button" class="btn" id="btn1">ВЫБРАТЬ ФОТО</button>
+					<div class="123">
+						
+					</div>
+				</div>
+				<div class="col-md-6">
+					<button type="button" class="btn" id="btn2">КАРТИНКА</button>
+					<button type="button" class="btn" id="btn3">ФИЛЬТР</button>
+					<div class="1234">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> -->
+
+	<section class="main">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-md-7">
+     
+	                <!-- <input type="file" id="bg-loader" accept="image/*"> -->
+
+	                <div class="fileUpload btn btn-primary btn-lg">
+	                    <span>Загрузить изображение с компьютера</span>
+	                    <input type="file" class="upload" id="bg-loader" accept="image/*"/>
+	                </div>
+
+	                <!-- Canvas placeholder -->
+	                <div id="canvas-drop-area" style="display: none">
+	                    <canvas id="canvas"></canvas>
+	                </div>
+
+	            </div>
+	            <div class="col-md-5">
+	                <div class="tools-container" style="display: none;">
+
+	                    <div class="tools-menu">
+	                        <ul class="nav nav-tabs">
+	                            <li class="active" id="images"><a>Изображения</a></li>
+	                            <li id="filters"><a>Фильтры</a></li>
+	                        </ul>
+	                    </div>                    
+	                    
+	                    <div class="tools images-container">
+	                        <p>Перетащите картинку на холст</p><hr>
+
+	                        <div class="images">
+	                            <div class="image-placeholder img-thumbnail"><img src="img/editor/1.png" class="draggable-image"></img></div>
+	                            <div class="image-placeholder img-thumbnail"><img src="img/editor/2.png" class="draggable-image"></img></div>
+	                            <div class="image-placeholder img-thumbnail"><img src="img/editor/3.png" class="draggable-image"></img></div>
+	                            <div class="image-placeholder img-thumbnail"><img src="img/editor/4.png" class="draggable-image"></img></div>
+	                            <div class="image-placeholder img-thumbnail"><img src="img/editor/5.png" class="draggable-image"></img></div>
+	                            <div class="image-placeholder img-thumbnail"><img src="img/editor/6.png" class="draggable-image"></img></div>
+	                            <div class="image-placeholder img-thumbnail"><img src="img/editor/7.png" class="draggable-image"></img></div>
+	                            <div class="image-placeholder img-thumbnail"><img src="img/editor/8.png" class="draggable-image"></img></div>
+	                            <div class="image-placeholder img-thumbnail"><img src="img/editor/9.png" class="draggable-image"></img></div>
+	                            <div class="image-placeholder img-thumbnail"><img src="img/editor/10.png" class="draggable-image"></img></div>
+	                            <div class="image-placeholder img-thumbnail"><img src="img/editor/11.png" class="draggable-image"></img></div>
+	                        </div><hr>
+
+	                        <div class="img-loader-container">
+	                            <p>Или загрузить изображения с вашего компьютера</p>
+	                            <input type="file" id="img-loader" accept="image/*">
+	                        </div>
+	                    </div> 
+
+	                    <div class="tools filters-container" style="display: none">
+	                        <p>Используйте любые фильтры</p><hr>
+	                        <div class="filters">
+
+	                            <label><input type="checkbox" id="grayscale"> Чёрно-белое</label>                 
+	                            <label><input type="checkbox" id="invert"> Инверсия</label>                        
+	                            <label><input type="checkbox" id="sepia"> Сепия</label>                          
+	                            <label><input type="checkbox" id="sepia2"> Сепия2</label>
+	                            <label><input type="checkbox" id="blur"> Размытие</label>
+	                            <label><input type="checkbox" id="sharpen"> Резкость</label>
+	                            <label><input type="checkbox" id="emboss"> Тиснение</label><hr>
+
+	                            <label><input type="checkbox" id="remove-white"> Удаление белого</label>
+	                            <label>Начало: <input type="range" id="remove-white-threshold" value="60" min="0" max="255"></label>
+	                            <label>Дистанция: <input type="range" id="remove-white-distance" value="10" min="0" max="255"></label><hr>
+
+	                            <label><input type="checkbox" id="brightness"> Яркость</label>
+	                            <label>Величина: <input type="range" id="brightness-value" value="100" min="0" max="255"></label><hr>
+
+	                            <label><input type="checkbox" id="noise"> Шум</label>
+	                            <label>Величина: <input type="range" id="noise-value" value="10" min="0" max="1000"></label><hr>
+
+	                            <label><input type="checkbox" id="gradient-transparency"> Градиент</label>
+	                            <label>Величина: <input type="range" id="gradient-transparency-value" value="100" min="0" max="255"></label><hr>
+
+	                            <label><input type="checkbox" id="pixelate"> Пиксель</label>
+	                            <label>Величина: <input type="range" id="pixelate-value" value="4" min="2" max="20"></label><hr>
+
+	                            <label><input type="checkbox" id="tint"> Тон</label>
+	                            <label>Цвет: <input type="color" id="tint-color" value=""></label>
+	                            <label>Прозрачность: <input type="range" id="tint-opacity" min="0" max="1" value="0.5" step="0.1"></label><hr>
+
+	                        </div>                        
+	                        <button id="remove-filters" class="btn btn-default">Удалить фильтры</button>
+	                    </div>                   
+
+	                    <div class="other-tools">                        
+	                        <button id="delete" class="btn btn-default">Удалить выбранные элементы</button>   
+	                        <button id="deselect" class="btn btn-default">Отменить выделенные элементы</button> 
+	                        <button id="flip-vertical" class="btn btn-default">Перевернуть вертикально</button>                                  
+	                    </div>  
+
+	                    <div class="download">
+	                        <a id="save" class="btn btn-primary btn-lg" download="Your image.png">Скачать изображение</a>
+	                    </div>             
+
+	                </div>
+	            </div>            
+	        </div>      
+	    </div>
+	</section>
+
+	</div>
+
+	<footer class="footer">
+		<p>Say Cheese, 2016</p>
+	</footer>
+
+	<!-- libraries -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="js/lib/jquery-ui.min.js"></script>  
+	<script src="js/lib/fabric.min.js"></script>
+	<!-- app -->
+	<script src="js/main.js"></script>
+	<script src="js/menu.js"></script>
+	<script src="js/options.js"></script>
+	<script src="js/filters.js"></script> 
+
+   </body>
+</html>
