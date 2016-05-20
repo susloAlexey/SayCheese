@@ -1,6 +1,7 @@
 /*Header*/
 body {
 	background-color: #dde2e2;
+	padding-bottom: 2em;
 }
 
 .top-header .col-md-12 {
@@ -15,7 +16,6 @@ body {
 }
 
 .navbar-default .navbar-nav li a  {
-	padding: 15px 0px;
 	margin-top: 20px;
 	margin-right: 30px;
 	color: white;
@@ -90,15 +90,11 @@ li.act {
 	margin-right: 3%;
 	padding-bottom: 40px;
 	display: inline-block;
-	width: 48%;
-	height: 48%;
 }
 
 .foto2 {
 	padding-bottom: 40px;
 	display: inline-block;
-	width: 48%;
-	height: 48%;
 }
 
 #middle .col-md-8 {
@@ -121,15 +117,12 @@ li.act {
 .tx  {
 	color: white;
 	font-size: 20px;
-	padding: 43.5% 5%;
 	text-align: center;
 	background-color: #c0cfcf;
 	height: 10%;
 	margin-bottom: 14%;
 	display: inline-block;
 	width: 100%;
-	max-width: 290px;
-	max-height: 370px;
 	overflow: hidden;
 	border-bottom: 3px solid #80ccec;
 }
@@ -150,9 +143,11 @@ li.act {
 	color: white;
 }
 
-.footer {
-	margin-top: 20px;
-	padding: 20px 0px;
+.footer {    
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 0px;
 	background-color: #80ccec; 
 	text-align: center;
 }

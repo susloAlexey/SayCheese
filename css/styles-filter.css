@@ -8,7 +8,6 @@ body .wrapper {
 	clear: both;
 	position: relative;
 	z-index: 10;
-	height: 6em;
 }
 
 .draggable-image {
@@ -74,6 +73,10 @@ body .wrapper {
     cursor: pointer;
     opacity: 0;
     filter: alpha(opacity=0);
+}
+
+.download {
+	margin-bottom: 50px;
 }
 
 .download a {
