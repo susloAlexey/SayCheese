@@ -4,11 +4,11 @@ body .wrapper {
 	min-height: 85%;
 }
 
-.footer {
+/*.footer {
 	clear: both;
 	position: relative;
 	z-index: 10;
-}
+}*/
 
 .draggable-image {
 	width: auto;
